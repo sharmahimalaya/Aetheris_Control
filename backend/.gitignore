@@ -1,0 +1,23 @@
+# Python overrides
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Sensitive data and environment variables
+.env
+.env.*
+*.log
+
+# Big data folders / training data
+data/
+
+# IDE and notebook caches
+.ipynb_checkpoints/
+.vscode/
+.idea/
