@@ -17,7 +17,8 @@ app.add_middleware(
 )
 
 model = TransformerModel(24)
-model.load_state_dict(torch.load("saved_models/model.pth"))
+torch.set_num_threads(1) # Limit CPU threads to prevent GIL freeze/RAM spikes on Render
+model.load_state_dict(torch.load("saved_models/model.pth", map_location=torch.device('cpu')))
 model.eval()
 
 @app.get("/")
