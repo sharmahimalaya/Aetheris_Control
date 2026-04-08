@@ -20,6 +20,14 @@ model = TransformerModel(24)
 model.load_state_dict(torch.load("saved_models/model.pth"))
 model.eval()
 
+@app.get("/")
+def root():
+    return {"status": "healthy", "service": "Aetheris Control - RUL Prediction API"}
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
 @app.post("/predict")
 def predict(sequence: List[List[float]] = Body(...)):
 
