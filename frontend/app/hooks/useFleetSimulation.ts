@@ -16,7 +16,8 @@ const FLEET_SIZE = 12;
 const TICK_INTERVAL_MS = 600; // faster ticks = smoother movement
 const HISTORY_BUFFER = 50; // keep last N sensor readings for charts
 const SEQUENCE_LENGTH = 30; // model expects 30 timesteps
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8001/predict";
+const RAW_API_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8001/predict";
+const API_URL = RAW_API_URL.endsWith("/predict") ? RAW_API_URL : `${RAW_API_URL.replace(/\/$/, '')}/predict`;
 const BATCH_SIZE = 12; // predict this many vehicles per tick
 
 /* ── Monotonic EMA: RUL can only go down (or stay) unless in maintenance ── */
