@@ -1,0 +1,46 @@
+﻿
+C:\Users\himal\Documents\Projects\spatio_temporal_transformer_based_predictive_maintenance_framework_for_smart_city_transportation\frontend\app\dashboard\components\FleetOverview.tsx
+  10:10  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\himal\Documents\Projects\spatio_temporal_transformer_based_predictive_maintenance_framework_for_smart_city_transportation\frontend\app\dashboard\components\FleetOverview.tsx:10:10
+   8 |   const fleet: Vehicle[] = Array.from({ length: 5 }, (_, i) => ({
+   9 |     id: i + 1,
+> 10 |     rul: Math.random() * 120,
+     |          ^^^^^^^^^^^^^ Cannot call impure function
+  11 |   }));
+  12 |
+  13 |   return (  react-hooks/purity
+
+C:\Users\himal\Documents\Projects\spatio_temporal_transformer_based_predictive_maintenance_framework_for_smart_city_transportation\frontend\app\dashboard\components\SensorChart.tsx
+  22:11  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\himal\Documents\Projects\spatio_temporal_transformer_based_predictive_maintenance_framework_for_smart_city_transportation\frontend\app\dashboard\components\SensorChart.tsx:22:11
+  20 |   const data: DataPoint[] = Array.from({ length: 20 }, (_, i) => ({
+  21 |     time: i,
+> 22 |     temp: Math.random() * 100,
+     |           ^^^^^^^^^^^^^ Cannot call impure function
+  23 |     vibration: Math.random()
+  24 |   }));
+  25 |  react-hooks/purity
+  23:16  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\himal\Documents\Projects\spatio_temporal_transformer_based_predictive_maintenance_framework_for_smart_city_transportation\frontend\app\dashboard\components\SensorChart.tsx:23:16
+  21 |     time: i,
+  22 |     temp: Math.random() * 100,
+> 23 |     vibration: Math.random()
+     |                ^^^^^^^^^^^^^ Cannot call impure function
+  24 |   }));
+  25 |
+  26 |   return (                                                      react-hooks/purity
+
+C:\Users\himal\Documents\Projects\spatio_temporal_transformer_based_predictive_maintenance_framework_for_smart_city_transportation\frontend\app\dashboard\page.tsx
+  28:14  warning  'err' is defined but never used  @typescript-eslint/no-unused-vars
+
+Γ£û 4 problems (3 errors, 1 warning)
+
